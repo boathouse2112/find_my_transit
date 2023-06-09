@@ -1,8 +1,10 @@
-use std::{fs, path::Path};
+use std::net::TcpListener;
 
-const FIND_MY_ITEMS_PATH: &str = "~/Library/Caches/com.apple.findmy.fmipcore/Items.data";
+use find_my_transit::run;
 
-/// Start by reading the Find My items data file
-fn main() {
-    let find_my_items = fs::read_to_string(FIND_MY_ITEMS_PATH);
+#[tokio::main]
+async fn main() -> std::io::Result<()> {
+    // Binding to port 0 gives us a random port to work with
+    let listener = TcpListener::bind("127.0.0.1:8000").expect("Failed to bind to random port");
+    run(listener)?.await
 }

@@ -2,11 +2,30 @@
 name = "find_my_transit"
 version = "0.1.0"
 edition = "2021"
+default-run = "find_my_transit"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "find_my_transit"
+path = "src/main.rs"
 
 [[bin]]
 name = "find_my_cache_backup"
 path = "src/bin/find_my_cache_backup.rs"
 
+[[bin]]
+name = "send_cache_data"
+path = "src/bin/send_cache_data.rs"
+
+[dev-dependencies]
+reqwest = "0.11.18"
+
 [dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+# find_my_cache_backup
 directories = "5.0.1"
 time = "0.3.22"
