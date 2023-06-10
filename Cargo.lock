@@ -472,6 +472,7 @@ dependencies = [
  "directories",
  "reqwest",
  "serde",
+ "serde_json",
  "time",
  "tokio",
 ]

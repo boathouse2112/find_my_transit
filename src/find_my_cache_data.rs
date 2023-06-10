@@ -1,37 +1,41 @@
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct ProductInformation {
     pub manufacturer_name: String,
     pub model_name: String,
-    pub product_identifier: String,
-    pub vendor_identifier: String,
+    pub product_identifier: u32,
+    pub vendor_identifier: u32,
     pub antenna_power: u32,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct ProductType {
     #[serde(rename = "type")]
     pub type_value: String,
     pub product_information: ProductInformation,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Location {
     pub position_type: String,
     pub vertical_accuracy: i32,
-    pub longitude: i32,
+    pub longitude: f64,
     pub floor_level: i32,
     pub is_inaccurate: bool,
     pub is_old: bool,
-    pub horizontal_accuracy: i32,
-    pub latitude: i32,
-    pub time_stamp: String,
+    pub horizontal_accuracy: f64,
+    pub latitude: f64,
+    pub time_stamp: u64,
     pub altitude: i32,
     pub location_finished: bool,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Address {
     pub sub_administrative_area: String,
     pub label: String,
@@ -48,7 +52,8 @@ pub struct Address {
     pub country: String,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct SafeLocation {
     #[serde(rename = "type")]
     pub type_value: u32,
@@ -59,14 +64,15 @@ pub struct SafeLocation {
     pub address: Address,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Role {
     pub name: String,
-    pub emojie: String,
+    pub emoji: String,
     pub identifier: i32,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct FindMyCacheData {
     pub part_info: Option<String>,
@@ -74,10 +80,10 @@ pub struct FindMyCacheData {
     pub product_type: ProductType,
     pub safe_locations: Vec<SafeLocation>,
     pub owner: String,
-    pub battery_status: String,
+    pub battery_status: u32,
     pub serial_number: String,
     pub lost_mode_metadata: Option<String>,
-    pub capabilities: String,
+    pub capabilities: u32,
     pub identifier: String,
     pub address: Address,
     pub location: Location,

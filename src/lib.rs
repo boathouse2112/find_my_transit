@@ -1,10 +1,11 @@
 use std::net::TcpListener;
 
 use actix_web::{dev::Server, get, post, web, App, HttpResponse, HttpServer, Responder};
-use find_my_cache::FindMyCacheData;
 
 #[allow(dead_code)]
-mod find_my_cache;
+mod find_my_cache_data;
+
+pub use find_my_cache_data::FindMyCacheData;
 
 #[get("/hello")]
 async fn hello() -> impl Responder {
@@ -17,7 +18,7 @@ async fn echo(req_body: String) -> impl Responder {
 }
 
 #[post("/find_my_cache_backup")]
-async fn post_find_my_cache_backup(cache_data: web::Json<FindMyCacheData>) -> impl Responder {
+async fn post_find_my_cache_backup(cache_data: web::Json<Vec<FindMyCacheData>>) -> impl Responder {
     println!("{:?}", cache_data);
 
     HttpResponse::Ok()

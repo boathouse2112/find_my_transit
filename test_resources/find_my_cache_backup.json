@@ -1,0 +1,121 @@
+[
+  {
+    "partInfo" : null,
+    "isFirmwareUpdateMandatory" : false,
+    "productType" : {
+      "type" : "b389",
+      "productInformation" : {
+        "manufacturerName" : "Apple",
+        "modelName" : "",
+        "productIdentifier" : 21760,
+        "vendorIdentifier" : 76,
+        "antennaPower" : 4
+      }
+    },
+    "safeLocations" : [
+      {
+        "type" : 1,
+        "approvalState" : 1,
+        "name" : "Home",
+        "identifier" : "0A7033B1-3F42-47EC-944B-D39FB62B85BF",
+        "location" : {
+          "positionType" : "safeLocation",
+          "verticalAccuracy" : 80,
+          "longitude" : -74.988045612509111,
+          "floorLevel" : -1,
+          "isInaccurate" : false,
+          "isOld" : true,
+          "horizontalAccuracy" : 80,
+          "latitude" : 44.675408488547689,
+          "timeStamp" : 1686353357217,
+          "altitude" : 0,
+          "locationFinished" : true
+        },
+        "address" : {
+          "subAdministrativeArea" : "セントローレンス",
+          "label" : "4 Walnut St",
+          "streetAddress" : "4",
+          "countryCode" : "US",
+          "stateCode" : "NY",
+          "administrativeArea" : "ニューヨーク",
+          "streetName" : "Walnut St",
+          "formattedAddressLines" : [
+            "4 Walnut St",
+            "ポツダム, NY  13676",
+            "アメリカ合衆国"
+          ],
+          "mapItemFullAddress" : "4 Walnut St, ポツダム, NY  13676",
+          "fullThroroughfare" : "4 Walnut St",
+          "areaOfInterest" : [
+
+          ],
+          "locality" : "ポツダム",
+          "country" : "アメリカ合衆国"
+        }
+      }
+    ],
+    "owner" : "owner@localhost",
+    "batteryStatus" : 1,
+    "serialNumber" : "J03KK5RNP0GV",
+    "lostModeMetadata" : null,
+    "capabilities" : 734,
+    "identifier" : "A8566E25-5764-4DDD-A7C6-454C7D30E99F",
+    "address" : {
+      "subAdministrativeArea" : "モンロー",
+      "label" : "35 Clarkes Crossing",
+      "streetAddress" : "35",
+      "countryCode" : "US",
+      "stateCode" : "NY",
+      "administrativeArea" : "ニューヨーク",
+      "streetName" : "Clarkes Crossing",
+      "formattedAddressLines" : [
+        "35 Clarkes Crossing",
+        "フェアポート, NY  14450",
+        "アメリカ合衆国"
+      ],
+      "mapItemFullAddress" : "35 Clarkes Crossing, フェアポート, NY  14450",
+      "fullThroroughfare" : "35 Clarkes Crossing",
+      "areaOfInterest" : [
+
+      ],
+      "locality" : "フェアポート",
+      "country" : "アメリカ合衆国"
+    },
+    "location" : {
+      "positionType" : "ownedDeviceLocation",
+      "verticalAccuracy" : -1,
+      "longitude" : -77.451122697043942,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 44.338249679264841,
+      "latitude" : 43.086214448400995,
+      "timeStamp" : 1686289866000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "productIdentifier" : "DE3DE9FC-A990-4391-B22B-3B1DF35934FA",
+    "isAppleAudioAccessory" : false,
+    "crowdSourcedLocation" : {
+      "positionType" : "ownedDeviceLocation",
+      "verticalAccuracy" : -1,
+      "longitude" : -77.451122697043942,
+      "floorLevel" : -1,
+      "isInaccurate" : false,
+      "isOld" : true,
+      "horizontalAccuracy" : 44.338249679264841,
+      "latitude" : 43.086214448400995,
+      "timeStamp" : 1686289866000,
+      "altitude" : -1,
+      "locationFinished" : true
+    },
+    "groupIdentifier" : null,
+    "role" : {
+      "name" : "財布",
+      "emoji" : "💳",
+      "identifier" : 9
+    },
+    "systemVersion" : "2.0.36",
+    "name" : "Mark’s Wallet"
+  }
+]
