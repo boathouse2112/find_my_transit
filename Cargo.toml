@@ -23,10 +23,24 @@ path = "src/bin/send_cache_data.rs"
 reqwest = "0.11.18"
 
 [dependencies]
-actix-web = "4"
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
 # find_my_cache_backup
 directories = "5.0.1"
 time = "0.3.22"
+# find_my_transit
+actix-web = "4"
+config = "0.11"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dependencies.sqlx]
+version = "0.5"
+default-features = false
+features = [
+  "runtime-actix-rustls",
+  "macros",
+  "postgres",
+  "uuid",
+  "time",
+  "migrate"
+]

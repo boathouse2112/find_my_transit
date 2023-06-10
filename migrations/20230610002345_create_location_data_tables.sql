@@ -9,7 +9,7 @@ CREATE TABLE locations (
     is_old BOOLEAN NOT NULL,
     horizontal_accuracy DOUBLE PRECISION NOT NULL,
     latitude DOUBLE PRECISION NOT NULL,
-    time_stamp NUMERIC NOT NULL,
+    timestamp timestamptz NOT NULL,
     altitude INT NOT NULL,
     location_finished BOOLEAN NOT NULL,
 
