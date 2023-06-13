@@ -3,7 +3,7 @@ mod utils;
 #[tokio::test]
 async fn hello_world() {
     // Arrange
-    let address = utils::spawn_app();
+    let address = utils::spawn_app().await;
     let client = reqwest::Client::new();
 
     // Act
