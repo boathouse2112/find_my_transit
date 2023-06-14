@@ -1,0 +1,3 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+MMJRTA,Mark Murphy Jr Regional Transit Authority (MMJRTA),https://github.com/boathouse2112/find_my_transit,America/New_York,en,585-309-9279,https://github.com/boathouse2112/find_my_transit,markmurphyjrdev@gmail.com
+

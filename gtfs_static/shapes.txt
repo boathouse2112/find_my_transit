@@ -1,0 +1,10 @@
+shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence,shape_dist_traveled
+outbound,43.10217,-77.46589,0,0.0000
+outbound,43.09871,-77.45097,1,0.7900
+outbound,43.09851,-77.44199,2,1.2500
+outbound,43.10813,-77.44171,3,1.9300
+inbound,43.10217,-77.46589,0,0.0000
+inbound,43.09871,-77.45097,1,0.6600
+inbound,43.09851,-77.44199,2,1.1200
+inbound,43.10813,-77.44171,3,1.9300
+

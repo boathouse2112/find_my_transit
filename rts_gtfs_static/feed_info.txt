@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+Regional Transit Service (RTS),http://www.myrts.com,en,20230403,20230625,April 2023
