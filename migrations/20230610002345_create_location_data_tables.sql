@@ -1,6 +1,7 @@
 -- Create location data tables
 CREATE TABLE locations (
     id uuid NOT NULL,
+    crowd_sourced BOOLEAN NOT NULL,
     position_type TEXT NOT NULL,
     vertical_accuracy INT NOT NULL,
     longitude DOUBLE PRECISION NOT NULL,
@@ -37,9 +38,10 @@ CREATE TABLE addresses (
 
 CREATE TABLE location_snapshots (
     id uuid NOT NULL,
-    location_id uuid REFERENCES locations(id),
-    crowd_sourced_location_id uuid REFERENCES locations(id),
-    address_id uuid REFERENCES addresses(id),
+    location_id uuid NOT NULL REFERENCES locations(id),
+    crowd_sourced_location_id uuid NOT NULL REFERENCES locations(id),
+    address_id uuid NOT NULL REFERENCES addresses(id),
+    server_timestamp timestamptz NOT NULL,
 
     PRIMARY KEY(id)
 );

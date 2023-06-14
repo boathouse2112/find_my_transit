@@ -3,12 +3,12 @@ mod utils;
 #[tokio::test]
 async fn hello_world() {
     // Arrange
-    let address = utils::spawn_app().await;
+    let app = utils::spawn_app().await;
     let client = reqwest::Client::new();
 
     // Act
     let response = client
-        .get(&format!("{}/hello", address))
+        .get(&format!("{}/hello", app.address))
         .send()
         .await
         .expect("Failed to execute request");
